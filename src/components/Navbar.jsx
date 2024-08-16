@@ -5,7 +5,7 @@ import { BiDonateHeart } from "react-icons/bi";
 import { NavLinks } from '../Data';
 import Flag from '../images/flag.jpg'
 import Logo from '../images/logo.png'
-import { FaFacebook, FaInstagramSquare, FaLinkedin, FaTwitter, FaWhatsappSquare } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isShowing, setIsShowing] = useState(false)
@@ -18,25 +18,25 @@ const Navbar = () => {
       <header className="relative inset-x-0 top-0 z-40 bg-green-50 shadow-2xl">
         <div className="hidden shadow-md lg:flex flex-1 items-center justify-end border-green-200">
           <div className="hidden md:flex mt-4 space-x-6 sm:justify-center sm:mt-0 mr-16">
-            <Link to="#" className="text-green-500  hover:text-blue-600">
+            <Link to="#" className="">
               <span className="sr-only">Facebook Page</span>
-              <FaFacebook className="h-6 w-6" fill="currentColor" />
+              <FaFacebookF className="h-5 w-5" fill="currentColor" />
             </Link>
-            <Link to="#" className="text-green-500 hover:text-sky-500">
+            <Link to="#" className="">
               <span className="sr-only">Twitter Page</span>
-              <FaTwitter className="h-6 w-6" fill="currentColor" />
+              <FaTwitter className="h-5 w-5" fill="currentColor" />
             </Link>
-            <Link to="#" className="text-green-500  hover:text-red-500">
+            <Link to="#" className="">
               <span className="sr-only">Instagram Page</span>
-              <FaInstagramSquare className="h-6 w-6" fill="currentColor" />
+              <FaInstagram className="h-5 w-5" fill="currentColor" />
             </Link>
-            <Link to="#" className="text-green-500 hover:text-blue-700">
+            <Link to="#" className="">
               <span className="sr-only">LinkedIn Page</span>
-              <FaLinkedin className="h-6 w-6" fill="currentColor" />
+              <FaLinkedinIn className="h-5 w-5" fill="currentColor" />
             </Link>
-            <Link to="#" className="text-green-500 hover:text-green-600">
+            <Link to="#" className="">
               <span className="sr-only">WhatsApp Page</span>
-              <FaWhatsappSquare className="h-6 w-6" fill="currentColor" />
+              <FaWhatsapp className="h-5 w-5" fill="currentColor" />
             </Link>
           </div>
           <img
@@ -51,7 +51,7 @@ const Navbar = () => {
           aria-label="Global"
         >
           <div className="flex lg:flex-1 items-center">
-            <img src={Logo} alt="Fibroid-embolization-foundation-kenya" className='w-24 h-24'/>
+            <img src={Logo} alt="Fibroid-embolization-foundation-kenya" className='w-16 h-16'/>
             <Link to="/" className="-m-2 p-1.5">
               <span className="sr-only">
                 Fibroid Embolisation Foundation - Kenya
@@ -95,21 +95,19 @@ const Navbar = () => {
           {/* Navigation Menu */}
 
           {/* Donation Button */}
-          <div className="hidden lg:flex lg:justify-end mr-6 lg:gap-x-8">
-            {/* <div className=" lg:flex lg:gap-x-8 mr-6"> */}
+          <div className="hidden lg:flex lg:justify-end mr-6 lg:gap-x-6">
             {NavLinks.map((nav, index) => {
               return (
                 <Link
                   key={index}
                   to={nav.href}
-                  className="group hover hover:border-b-2 border-green-500 hover:text-green-500 hover:px-0 hover:py-2 text-medium gap-x-2 leading-7 tracking-wide font-medium flex justify-center items-center"
+                  className="group hover hover:border-b-2 border-green-500 hover:text-green-500 hover:px-0 hover:py-2 gap-x-2 leading-7 font-medium flex justify-center items-center"
                 >
                   {nav.icon}
                   {nav.name}
                 </Link>
               );
             })}
-            {/* </div> */}
             <Link
               to="make-a-donation"
               className="group border-2 border-green-600 hover:border-green-500 flex justify-center items-center gap-x-2 py-2 px-8 rounded-full 

@@ -1,67 +1,32 @@
 import {
   HomeIcon,
-  NewspaperIcon,
   UserGroupIcon,
 } from "@heroicons/react/24/outline";
-import { BiNews, BiMessage } from "react-icons/bi";
-import { VscQuestion } from "react-icons/vsc";
-// import { BsFillBasket2Fill } from "react-icons/bs";
-
-// import { RiHandCoinLine } from "react-icons/ri";
+import { BiMessage } from "react-icons/bi";
 
 export const NavLinks = [
   {
     name: "Home",
     icon: (
-      <HomeIcon className="w-6 h-6 text-green-500 font-bold group-hover:text-green-500" />
+      <HomeIcon className="w-6 h-6 text-primary font-bold group-hover:text-green-500" />
     ),
     href: "/",
   },
   {
     name: "About",
     icon: (
-      <UserGroupIcon className="w-6 h-6 text-green-500 group-hover:text-green-500" />
+      <UserGroupIcon className="w-6 h-6 text-primary group-hover:text-green-500" />
     ),
-    href: "about",
-  },
-  // {
-  //   name: "Projects",
-  //   icon: (
-  //     <RiHandCoinLine className="w-6 h-6 text-blue-700 group-hover:text-gray-950" />
-  //   ),
-  //   href: "projects",
-  // },
-  {
-    name: "News & More",
-    icon: (
-      <NewspaperIcon className="w-6 h-6 text-green-600 group-hover:text-green-500" />
-    ),
-    href: "news-and-more",
-  },
-];
-
-export const NewsLinks = [
-  {
-    name: "News & Updates",
-    icon: <BiNews className="w-8 h-8 text-green-600 group-hover:text-gray-950" />,
-    href: "news-and-updates",
-  },
-  {
-    name: "Frequently Asked Questions",
-    icon: (
-      <VscQuestion className="w-8 h-8 text-green-600 group-hover:text-gray-950" />
-    ),
-    href: "frequently-asked-questions",
+    href: "/about",
   },
   {
     name: "Contact Us",
     icon: (
-      <BiMessage className="w-8 h-8 text-green-600 group-hover:text-gray-950" />
+      <BiMessage className="w-6 h-6 text-primary group-hover:text-gray-950" />
     ),
-    href: "contact-us",
+    href: "/contact-us",
   },
 ];
-
 export const Faqs = [
   {
     id: 1,

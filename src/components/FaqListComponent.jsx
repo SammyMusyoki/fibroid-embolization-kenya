@@ -1,7 +1,7 @@
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/outline';
 import React, { useState } from 'react'
 
-const FaqComponent = ({ item }) => {
+const FaqListComponent = ({ item }) => {
 
     const [activeTab, setActiveTab] = useState(null)
 
@@ -15,7 +15,7 @@ const FaqComponent = ({ item }) => {
 
   return (
     <React.Fragment>
-      <li className="w-full bg-green-500">
+      <li className="w-full bg-primary/80">
         <button
           onClick={() => handleTabClick(item.id)}
           className="p-4 flex justify-between w-full"
@@ -35,15 +35,15 @@ const FaqComponent = ({ item }) => {
         </button>
 
         <div
-          className={`bg-green-700 text-white ${
+          className={`border bg-background border-t-0 ${
             activeTab === item.id ? " " : "translate-y-0 hidden"
-          } transition-transform duration-1000 ease-in-out`}
+          } transition-transform duration-600 ease-in-out`}
         >
-         {activeTab === item.id && <p className="text-lg font-medium p-6 text-white">{item.answer}</p>}
+         {activeTab === item.id && <p className="text-lg font-medium p-6">{item.answer}</p>}
         </div>
       </li>
     </React.Fragment>
   );
 };
 
-export default FaqComponent
+export default FaqListComponent

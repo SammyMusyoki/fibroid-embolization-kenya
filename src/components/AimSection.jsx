@@ -4,7 +4,7 @@ import SectionComponent from './SectionComponent'
 const AimSection = () => {
   return (
     <React.Fragment>
-      <SectionComponent className="bg-green-700">
+      <SectionComponent className="bg-primary">
         <div className="text-center relative -mb-10">
           <h2 className="text-gray-50 text-xl md:text-4xl font-serif font-semibold tracking-wider pb-4">
             As a foundation, our focus is on educating and creating awareness on
@@ -14,7 +14,7 @@ const AimSection = () => {
             Our aim is to educate women about their reproductive health and Fibroid
             Embolization, a safe and effective treatment for uterine fibroids. We aim to empower them to make informed decisions about their reproductive health.
           </p>
-          <blockquote className="p-4 my-4 border-l-4 rounded-r-xl border-gray-300 bg-green-500">
+          <blockquote className="p-4 my-4 border-l-4 rounded-r-xl border-primary-foreground bg-green-400">
             <p className="text-md sm:text-lg italic font-semibold text-gray-950">
               Fibroid embolization offers women a safe and effective alternative
               to traditional surgical treatments for uterine fibroids. By

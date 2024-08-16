@@ -3,10 +3,11 @@ import HeroComponent from '../components/HeroComponent'
 import SectionComponent from '../components/SectionComponent'
 import emailjs from '@emailjs/browser'
 
-const SuccessResult = () => {
+const SuccessResult = ({ message }) => {
   return (
     <p className='bg-green-500 p-2 rounded-lg'>
-      Your message has been sent succesfully. We will get back to you as soon as possible.
+      {/* Your message has been sent succesfully. We will get back to you as soon as possible. */}
+      {message}
     </p>
   )
 }
@@ -14,6 +15,7 @@ const SuccessResult = () => {
 const Contact = () => {
 
   const [isResult, setShowResult] = useState(false)
+  const [message, setMessage] = useState("")
   
   const contactForm = useRef()
 
@@ -22,17 +24,17 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_015pi33",
+        "service_rv4eeqn",
         "template_05ky0dn",
         contactForm.current,
         "VbSqNlIUmTswPBEfC"
       )
       .then(
         (result) => {
-          console.log(result.text);
+          setMessage(result.text);
         },
         (error) => {
-          console.log(error.text);
+          setMessage(error.text);
         }
       );
       contactForm.current.reset();
@@ -52,7 +54,7 @@ const Contact = () => {
           </h1>
         </div>
       </HeroComponent>
-      <SectionComponent className="bg-green-100">
+      <SectionComponent >
         <p className="max-w-xl mx-auto mt-4 text-lg leading-relaxed text-gray-500">
           Please fill out the form below to send us a message. We will get back
           to you as soon as possible.
@@ -60,7 +62,7 @@ const Contact = () => {
 
         <div className="max-w-5xl mx-auto mt-12 sm:mt-16">
           <div className="grid grid-cols-1 gap-6 px-8 text-center md:px-0 md:grid-cols-3">
-            <div className="overflow-hidden bg-gray-50 rounded-xl">
+            <div className="overflow-hidden border rounded-xl">
               <div className="p-6">
                 <svg
                   className="flex-shrink-0 w-10 h-10 mx-auto text-green-500"
@@ -85,7 +87,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="overflow-hidden bg-gray-50 rounded-xl">
+            <div className="overflow-hidden border rounded-xl">
               <div className="p-6">
                 <svg
                   className="flex-shrink-0 w-10 h-10 mx-auto text-green-500"
@@ -110,7 +112,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="overflow-hidden bg-gray-50 rounded-xl">
+            <div className="overflow-hidden border rounded-xl">
               <div className="p-6">
                 <svg
                   className="flex-shrink-0 w-10 h-10 mx-auto text-green-500"
@@ -140,7 +142,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="mt-6 overflow-hidden bg-gray-50 rounded-xl">
+          <div className="mt-6 overflow-hidden border rounded-xl">
             <div className="px-6 py-12 sm:p-12">
               <h3 className="text-3xl font-semibold text-center text-gray-900">
                 Send us a message
@@ -259,7 +261,7 @@ const Contact = () => {
                 </div>
               </form>
               <div className='mt-2'>
-                {isResult ? <SuccessResult /> : null}
+                {isResult ? <SuccessResult message={message}/> : null}
               </div>
             </div>
           </div>
