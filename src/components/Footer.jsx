@@ -1,13 +1,14 @@
 import React from 'react'
-import{ FaFacebook, FaInstagramSquare, FaLinkedin, FaTwitter, FaWhatsappSquare}from "react-icons/fa"
+import{ FaFacebook, FaInstagramSquare, FaTwitter}from "react-icons/fa"
 import { BiPaperPlane } from "react-icons/bi";
 import{ NavLinks } from '../Data'
 import { Link } from 'react-router-dom'
+import { siteMetadata } from '../config/site-metadata';
 
 const Footer = () => {
   return (
     <React.Fragment>
-      <footer className="bottom-0 left-0 z-40 w-full border-t border-green-600 bg-green-700">
+      <footer className="bottom-0 left-0 z-40 w-full bg-primary">
         <div className="mx-auto w-full max-w-screen-xl">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 px-4 py-6 lg:py-8 lg:grid-cols-3">
             <div>
@@ -96,26 +97,26 @@ const Footer = () => {
             </span>
 
             <div className="flex justify-center py-4 space-x-6 sm:justify-center sm:mt-0 lg:hidden">
-              <Link to="#" className="text-pink-200  hover:text-blue-600">
+              <Link to={siteMetadata.facebook} className="text-pink-200">
                 <span className="sr-only">Facebook Page</span>
                 <FaFacebook className="h-6 w-6" fill="currentColor" />
               </Link>
-              <Link to="#" className="text-pink-200  hover:text-sky-500">
+              <Link to={siteMetadata.twitter} className="text-pink-200">
                 <span className="sr-only">Twitter Page</span>
                 <FaTwitter className="h-6 w-6" fill="currentColor" />
               </Link>
-              <Link to="#" className="text-pink-200  hover:text-red-500">
+              <Link to={siteMetadata.instagram} className="text-pink-200">
                 <span className="sr-only">Instagram Page</span>
                 <FaInstagramSquare className="h-6 w-6" fill="currentColor" />
               </Link>
-              <Link to="#" className="text-pink-200  hover:text-blue-700">
+              {/* <Link to={siteMetadata.} className="text-pink-200">
                 <span className="sr-only">LinkedIn Page</span>
                 <FaLinkedin className="h-6 w-6" fill="currentColor" />
               </Link>
-              <Link to="#" className="text-pink-200  hover:text-green-600">
+              <Link to={siteMetadata.} className="text-pink-200 ">
                 <span className="sr-only">WhatsApp Page</span>
                 <FaWhatsappSquare className="h-6 w-6" fill="currentColor" />
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
