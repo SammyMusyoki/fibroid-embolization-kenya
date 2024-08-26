@@ -5,7 +5,8 @@ import { BiDonateHeart } from "react-icons/bi";
 import { NavLinks } from '../Data';
 import Flag from '../images/flag.jpg'
 import Logo from '../images/logo.png'
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, FaWhatsapp } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaTwitter} from 'react-icons/fa';
+import { siteMetadata } from '../config/site-metadata';
 
 const Navbar = () => {
   const [isShowing, setIsShowing] = useState(false)
@@ -18,26 +19,26 @@ const Navbar = () => {
       <header className="relative inset-x-0 top-0 z-40 bg-green-50 shadow-2xl">
         <div className="hidden shadow-md lg:flex flex-1 items-center justify-end border-green-200">
           <div className="hidden md:flex mt-4 space-x-6 sm:justify-center sm:mt-0 mr-16">
-            <Link to="#" className="">
+            <Link to={siteMetadata.facebook} className="">
               <span className="sr-only">Facebook Page</span>
               <FaFacebookF className="h-5 w-5" fill="currentColor" />
             </Link>
-            <Link to="#" className="">
+            <Link to={siteMetadata.twitter} className="">
               <span className="sr-only">Twitter Page</span>
               <FaTwitter className="h-5 w-5" fill="currentColor" />
             </Link>
-            <Link to="#" className="">
+            <Link to={siteMetadata.instagram} className="">
               <span className="sr-only">Instagram Page</span>
               <FaInstagram className="h-5 w-5" fill="currentColor" />
             </Link>
-            <Link to="#" className="">
+            {/* <Link to={siteMetadata} className="">
               <span className="sr-only">LinkedIn Page</span>
               <FaLinkedinIn className="h-5 w-5" fill="currentColor" />
             </Link>
-            <Link to="#" className="">
+            <Link to={siteMetadata} className="">
               <span className="sr-only">WhatsApp Page</span>
               <FaWhatsapp className="h-5 w-5" fill="currentColor" />
-            </Link>
+            </Link> */}
           </div>
           <img
             src={Flag}

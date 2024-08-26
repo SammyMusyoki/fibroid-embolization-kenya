@@ -30,6 +30,7 @@ const AimSection = () => {
           <div className="aspect-video">
             <iframe
               className="w-full h-full"
+              rel='preconnect'
               src="https://www.youtube.com/embed/5NZSLsQwERA"
               title="Uterine Fibroid Embolization Treatment"
               frameBorder="0"
